@@ -3,7 +3,7 @@ $host = "localhost";
 $user = "root";
 $password = "";
 $database = "java_project";
-$conection = mysqli_connect($host, $user , $password, $database);
+$connection = mysqli_connect($host, $user , $password, $database);
 
 $primalStr = "{Пожалуйста,|Просто|Если сможете,} сделайте так, чтобы это {удивительное|очень{крутое|веселое|забавное}|простое|важное|бесполезное} тестовое предложение {изменялось {быстро|мгновенно|оперативно|правильно} случайным образом|менялось каждый раз}.";
 echo $primalStr."<br>"."<br>"."<br>"."<br>";
