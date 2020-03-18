@@ -16,10 +16,10 @@ function callBack($matches) {
 }
 
 $resStr = preg_replace_callback('~{(?>[^{}]+|(?0))*}~', 'callBack', $primalStr);
-$checkDB = $conection->query("SELECT * FROM `str` WHERE `str` =  '$resStr'  ");
+$checkDB = $connection->query("SELECT * FROM `str` WHERE `str` =  '$resStr'  ");
 if (count($checkDB->fetch_assoc())>0 ){
     echo "Запись \"$resStr\" уже существует";
 }else{
     echo "Запись \"$resStr\" добавлена в БД";
-    $res = $conection->query("INSERT INTO `str` (`id`, `str`) VALUES (NULL, '$resStr')");
+    $res = $connection->query("INSERT INTO `str` (`id`, `str`) VALUES (NULL, '$resStr')");
 };
